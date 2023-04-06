@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Robux Generator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      input[type="number"], input[type="button"] {
+        border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        font-size: 16px;
+      }
+      input[type="button"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Free Robux</h1>
+      <p>Enter the amount of Robux you want to buy:</p>
+      <input type="number" id="robuxAmount" name="robuxAmount" min="1" max="1000">
+      <input type="button" value="Get" onclick="redirectToLink()">
+    </form>
+
+    <script>
+      function redirectToLink() {
+        var robuxAmount = document.getElementById("robuxAmount").value;
+        var link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" + robuxAmount;
+        window.location.href = link;
+      }
+    </script>
+  </body>
+</html>
